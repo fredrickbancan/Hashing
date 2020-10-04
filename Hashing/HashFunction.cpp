@@ -19,7 +19,7 @@ namespace HashFunction
 
 		for (unsigned int i = 0; i < length; ++i)
 		{
-			hash += data[i];
+			hash = hash * 101 + (unsigned int)data[i];
 		}
 		return hash;
 	}

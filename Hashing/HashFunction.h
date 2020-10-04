@@ -11,6 +11,7 @@ namespace HashFunction
 	unsigned int fredHash(const char* data, unsigned int length);
 
 	// ADD YOUR FUNCTIONS HERE
+
 	// a helper to access a default hash function
 	static HashFunc defaultHash = fredHash;
 }
