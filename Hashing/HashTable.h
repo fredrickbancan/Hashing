@@ -1,13 +1,14 @@
 #pragma once
 #include "HashFunction.h"
 #include <string>
-#include <list>
+#include <vector>
 /*class for manipulating a hash table of large strings with names pointing to each one.*/
 class HashTable
 {
+	typedef std::vector<std::pair<std::string, std::string>> Bucket;
 private:
 	static const int tableSize = 100;
-    const char** table;
+	Bucket* table;
 	int count;
 	/*creates and returns a hash of the key provided*/
 	unsigned int hashKey(std::string key);
